@@ -7,16 +7,20 @@ import {
   Text,
   View,
 } from 'react-native';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" />
+      <ExpoStatusBar style="auto" />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View style={styles.content}>
           <Text style={styles.heading}>Hello React Native!</Text>
           <Text style={styles.text}>
             Welcome to your new React Native app
+          </Text>
+          <Text style={styles.subtext}>
+            Running on Expo for Web
           </Text>
         </View>
       </ScrollView>
@@ -47,6 +51,13 @@ const styles = StyleSheet.create({
     color: '#666',
     textAlign: 'center',
     paddingHorizontal: 20,
+  },
+  subtext: {
+    fontSize: 14,
+    color: '#999',
+    textAlign: 'center',
+    paddingHorizontal: 20,
+    marginTop: 16,
   },
 });
 
